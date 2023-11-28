@@ -2,7 +2,7 @@
 def uppercase(str):
     for c in str:
         last = c
-        if ord(c) >= ord('a') and ord(c) <= ('z'):
+        if ord(c) >= 97 and ord(c) <= 122:
             last = chr(ord(c) - (ord('a') - ord('A')))
         print("{}".format(last), end="")
     print()
