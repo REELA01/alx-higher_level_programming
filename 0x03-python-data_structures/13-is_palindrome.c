@@ -6,6 +6,8 @@
 */
 int is_palindrome(listint_t **head)
 {
+	if (head == NULL || *head == NULL)
+		return (1);
 	return (checkPalindrome(head, *head));
 }
 
@@ -17,10 +19,12 @@ int is_palindrome(listint_t **head)
 */
 int checkPalindrome(listint_t **start, listint_t *end)
 {
-	int res;
-
 	if (end == NULL)
 		return (1);
-	res = checkPalindrome(start, end->next) && ((*start)->n == end->n);
-	return (res);
+	if (checkPalindrome(start, end->next) && (*start)->n == end->n)
+	{
+		*start = (*start)->next;
+		return (1);
+	}
+	return (0);
 }
