@@ -2,11 +2,11 @@
 def divisible_by_2(my_list=[]):
     if my_list is None:
         return None
-    lis = []
+    l = []
     for i in my_list:
         if (i % 2) == 0:
-            lis.append(True)
+            l.append(True)
         else:
-            lis.append(False)
-    return lis
+            l.append(False)
+    return l
 
