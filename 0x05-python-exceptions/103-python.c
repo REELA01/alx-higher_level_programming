@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <floatobject.h>
 #include <Python.h>
 /**
  * print_python_bytes - prints byte info
