@@ -8,20 +8,20 @@ class Rectangle:
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-        """ Instantiation with optional width and height"""
+        """ instantiation with width and height"""
         self.width = width
         self.height = height
         type(self).number_of_instances += 1
 
     @property
     def width(self):
-        """width
+        """width getter
         """
         return self.__width
 
     @property
     def height(self):
-        """height
+        """height getter
         """
         return self.__height
 
