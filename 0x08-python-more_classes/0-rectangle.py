@@ -2,7 +2,6 @@
 """to pass a rect"""
 
 
-
 class Rectangle:
     """empty rect"""
     pass
