@@ -58,7 +58,7 @@ class Rectangle:
 
     def __repr__(self):
         """Return official rep pf rect"""
-        return "Rectangle({}, {})".format(self.__width, self.__height)
+        return ("Rectangle({}, {})".format(self.__width, self.__height))
 
     def __del__(self):
         """print massage on delete"""
