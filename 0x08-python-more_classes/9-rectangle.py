@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-""" empty class Rectangle that defines a rectangle
-"""
+"""rectangle class"""
 
 
 class Rectangle:
-    """ class rectangle"""
+    """define rectangle"""
     number_of_instances = 0
     print_symbol = "#"
 
