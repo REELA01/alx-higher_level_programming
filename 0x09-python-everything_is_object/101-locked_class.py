@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-""" LockedClass
-"""
+"""Module  of loced calss"""
 
 
-class LockedClass:
-    __slots__= ['first_name']
+class LockedClass():
+    """class prevent dynamic attributes creation"""
+    __slots__ = ['first_name']
