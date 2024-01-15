@@ -19,7 +19,6 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """JSON string representation of list_dictionaries"""
-
         if list_dictionaries is None or not list_dictionaries:
             return "[]"
         else:
@@ -28,7 +27,6 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """save json represnation to a file"""
-
         if list_objs is not None:
             list_objs = [ob.to_dictionary() for ob in list_objs]
         with open("{}.json".format(cls.__name__), "w", encoding="utf-8") as f:
@@ -37,7 +35,6 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         """deserialaization"""
-
         if json_string is None or not json_string:
             return []
         return loads(json_string)
@@ -47,7 +44,6 @@ class Base:
         """returns an instance with all attributes already set"""
         from models.rectangle import Rectangle
         from models.square import Square
-
         if cls is Rectangle:
             new = Rectangle(1, 1)
         elif cls is Square:
@@ -61,7 +57,6 @@ class Base:
     def load_from_file(cls):
         """load from the file that we have save to"""
         from os import path
-
         file = "{}.json".format(cls.__name__)
         if not path.isfile(file):
             return []
@@ -73,7 +68,6 @@ class Base:
         """save to csv"""
         from models.rectangle import Rectangle
         from models.square import Square
-
         if list_objs is not None:
             if cls is Rectangle:
                 list_objs = [[ob.id, ob.width, ob.height, ob.x, ob.y]
@@ -91,7 +85,6 @@ class Base:
         """load from csv"""
         from models.rectangle import Rectangle
         from models.square import Square
-
         ret = []
         with open('{}.csv'.format(cls.__name__), 'r', newline='',
                   encoding='utf-8') as f:
