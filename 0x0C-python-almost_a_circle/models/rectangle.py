@@ -84,3 +84,18 @@ class Rectangle(Base):
         return "[{}] ({}) {}/{} - {}/{}".\
             format(type(self).__name__, self.id, self.x, self.y, self.width,
                    self.height)
+
+    def update(self, *args, **kwargs):
+        """update updated"""
+        if args is not None and len(args) is not 0:
+            lst = ['id', 'width', 'height', 'x', 'y']
+            for i in range(len(args)):
+                setattr(self, lst[i], args[i])
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+
+    def to_dictionary(self):
+        """return dict of rectangle"""
+        return {"id": self.id, "width": self.__width, "height": self.__height,
+                "x": self.__x, "y": self.__y}
