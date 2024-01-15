@@ -6,6 +6,7 @@ import csv
 
 class Base:
     """the base class representation"""
+
     __nb_objects = 0
 
     def __init__(self, id=None):
