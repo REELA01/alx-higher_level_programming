@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const dic = require('./101-data').dic;
+const dic = require('./101-data').dict;
 const tlist = Object.entries(dic);
 const va = Object.values(dic);
 const vaUniq = [...new Set(va)];
