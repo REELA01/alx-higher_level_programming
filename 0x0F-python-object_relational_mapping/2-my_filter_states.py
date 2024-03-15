@@ -11,7 +11,7 @@ if __name__ == "__main__":
     curr.execute("SELECT * FROM states WHERE name LIKE BINARY '{}'"
                 .format(sys.argv[4]))
     ro = curr.fetchall()
-    for r in ro:
-        print(r)
+    for row in ro:
+        print(row)
     curr.close()
     db.close()
