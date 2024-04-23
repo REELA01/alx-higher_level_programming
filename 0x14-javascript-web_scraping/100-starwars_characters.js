@@ -10,12 +10,12 @@ reqq.get(url + id, function (error, res, body) {
   const data = JSON.parse(body);
   const dd = data.characters;
   for (const i of dd) {
-    reqq.get(i, function (error, res, body_1) {
+    reqq.get(i, function (error, res, body1) {
       if (error) {
         console.log(error);
       }
-      const data_1 = JSON.parse(body_1);
-      console.log(data_1.name);
+      const data1 = JSON.parse(body1);
+      console.log(data1.name);
     });
   }
 });
